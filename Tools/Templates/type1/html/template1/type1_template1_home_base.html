@@ -1,0 +1,24 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		
+		<link rel="stylesheet" type="text/css" href="{% static 'main/css/type1_template1_main.css' %}">
+		<link href="https://fonts.googleapis.com/css?family=Muli|Varela|Red+Hat+Display|Varela+Round|Raleway&display=swap" rel="stylesheet">
+		<link rel="icon" type="image/png" href="{% static 'main/img/site-logo.png' %}">
+		{% if title %}
+		<title>
+			pr0j3ct_n4m3 -- {{ title }}
+		</title>
+		{% else %}
+		<!-- 20 characters max -->
+		<title>
+			pr0j3ct_n4m3
+		</title>
+		{% endif %}
+	</head>
+	{% block content %}
+	{% endblock content %}
+</html>

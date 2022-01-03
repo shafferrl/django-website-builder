@@ -1,0 +1,13 @@
+# Files and Directories to Exclude #
+####################################
+
+
+Projects/**/ProjectFolders/**
+Projects/**/VirtualEnvs/**
+Projects/**/django_projects_db.sqlite
+Projects/**/BashScripts/**
+Projects/**/LinuxConfigFiles/**
+Projects/**/Logs/**
+Projects/**/PackageRequirements/**
+Projects/**/PythonTemplates/**
+Documentation/**

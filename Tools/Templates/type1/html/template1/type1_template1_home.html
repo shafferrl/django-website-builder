@@ -1,0 +1,251 @@
+{% extends "main/base.html" %}
+{% load static %}
+{% block content %}
+	<body>
+
+		<!-- Header -->
+		<header>
+			<nav class="navbar navbar-expand">
+				<div class="container">
+					<a href="#intro"><img class="navbar-logo" src="{% static 'main/img/site-logo.png' %}" alt="navbar logo"></a>
+					<h1 class="navbar-brand">pr0j3ct_n4m3</h1> <!--20 characters max -->
+					<button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					<div class="collapse navbar-collapse" id="navbarToggle">
+						<div class="navbar-nav">
+							<a class="nav-item nav-link"  id="about-link" href="#about">about</a>
+							<a class="nav-item nav-link" id="services-link" href="#services">services</a>
+							<a class="nav-item nav-link" id="portfolio-link" href="#portfolio">portfolio</a>
+							<a class="nav-item nav-link" id="contact-link" href="#contact">contact</a>
+						</div>
+					</div>
+				</div>
+			</nav>
+		</header>
+
+		<main>
+			<!-- Slideshow Overlays -->
+			<div id="overlay"></div>
+			<img id="exit-slideshow" src="{% static 'main/img/exit-button.png' %}">
+
+			<!-- Intro -->
+			<div id="intro">
+				<div id="intro-statement">
+					<h2>PROFESSIONAL TECH SERVICES FOR VISIONARIES ON A BUDGET</h2>
+					<div id="intro-border"></div>
+					<p><a id="intro-next" href="#about"><span>Make Your Vision Reality</span></a></p>
+				</div>
+			</div>
+
+			<!-- About -->
+			<div id="about">
+				<h1 class="section-title" id="about-title">A Bit About Us</h1>
+				<div class="section-border title-border" id="about-title-border"></div>
+				<div id="about-container">
+					<div id="about-img-container">
+						<img id="about-img" src="{% static 'main/img/about-img.jpg' %}" alt="About Image">
+					</div>
+					<div id="about-blurb">
+						<p>With a background in different technological areas including mechanical engineering and web development, Per Aspera Design has a commitment to going above and beyond expectations and delivering high-quality products and services at affordable rates and fast turnaround times.</p>
+						<p>Our commitment to excellence and keeping our customers satisfied extends to all of our areas of expertise.  Scroll further to see if our services align with your needs.</p>
+					</div>
+				</div>
+				<a class="section-next" id="about-next" href="#services">See What We Do</a>
+			</div>
+
+			<!-- Services -->
+			<div id="services">
+				<h1 class="section-title" id="services-title">Our Services</h1>
+				<div class="section-border title-border" id="services-title-border"></div>
+				<div class="services-container">
+					<div class="services-column">
+						<div class="services-card-container">
+							<div class="services-card">
+								<img class="services-logo" src="{% static 'main/img/services-img-1.png' %}" alt="services logo">
+								<div class="services-blurb">
+									<h2 class="services-blurb-title">Front-End Development</h2>
+									<p class="services-blurb-text blurb-full">The well-known web technologies of HTML, CSS, and JavaScript are used for "front-end" development for sleek and dynamic websites.&nbsp;<span>show all</span></p>
+									<p class="services-blurb-text blurb-mobile">w/ HTML, CSS, and JavaScript.&nbsp;<span>more info</span></p>
+								</div>
+							</div>
+							<div class="services-card" id="services-card-2">
+								<img class="services-logo" src="{% static 'main/img/services-img-2.png' %}" alt="services logo">
+								<div class="services-blurb">
+									<h2 class="services-blurb-title">Back-End Development</h2>
+									<p class="services-blurb-text blurb-full">Python and the web framework, Django, are used for server-side control on the "back-end" for secure and sensible operation.&nbsp;<span>show all</span></p>
+									<p class="services-blurb-text blurb-mobile">w/ Python and Django.&nbsp;<span>more info</span></p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="services-column">
+						<div class="services-card-container">
+							<div class="services-card" id="services-card-3">
+								<img class="services-logo" src="{% static 'main/img/services-img-3.png' %}" alt="services logo">
+								<div class="services-blurb">
+									<h2 class="services-blurb-title">Server Deployment</h2>
+									<p class="services-blurb-text blurb-full">Web applications are deployed to the internet on a Linux server running Ubuntu and Apache for a robust, extensible platform.&nbsp;<span>show all</span></p>
+									<p class="services-blurb-text blurb-mobile">w/ Ubuntu and Apache.&nbsp;<span>more info</span></p>
+								</div>
+							</div>
+							<div class="services-card" id="services-card-4">
+								<img class="services-logo" src="{% static 'main/img/services-img-4.png' %}" alt="services logo">
+								<div class="services-blurb">
+									<h2 class="services-blurb-title">Engineering Services</h2>
+									<p class="services-blurb-text blurb-full">Other services include computer-aided design with Solidworks, Autodesk Fusion 360, or finite element analysis with Nastran.&nbsp;<span>show all</span></p>
+									<p class="services-blurb-text blurb-mobile">w/ Fusion 360, Solidworks, and Nastran.&nbsp;<span>more info</span></p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<a class="section-next" id="services-next" href="#portfolio">See Portfolio</a>
+			</div>
+
+			<!-- Portfolio -->
+			<div id="portfolio">
+				<h1 class="section-title" id="portfolio-title">Work Portfolio</h1>
+				<div class="portfolio-slideshow">
+					<div class="slideshow-controls" id="slideshow-prev">&lt;</div>
+					<div class="slideshow-controls" id="slideshow-next">&gt;</div>
+					<div id="slideshow-img-container">
+						<div class="slideshow-img-backing">
+							<img class="portfolio-img slideshow-img" src="{% static 'main/img/portfolio-img-1.jpg' %}" alt="portfolio image">
+							<div class="slideshow-text">
+								<h3 class="slideshow-title">Flight Control Systems</h3>
+								<p class="slideshow-blurb">Design, analysis, and drafting of mechanical flight control systems for Boeing, Airbus, Gulfstream, Mitsubishi, and Embraer.</p>
+							</div>
+							<div class="slideshow-text-toggle">more</div>
+						</div><div class="slideshow-img-backing">
+							<img class="portfolio-img slideshow-img" src="{% static 'main/img/portfolio-img-2.jpg' %}" alt="portfolio image">
+							<div class="slideshow-text">
+								<h3 class="slideshow-title">Computer Programming</h3>
+								<p class="slideshow-blurb">Python, JavaScript, HTML, CSS, Linux, Bash, and Windows, from scripting to complete web and desktop applications, emphasizing usability and security.</p>
+							</div>
+							<div class="slideshow-text-toggle">more</div>
+						</div><div class="slideshow-img-backing">
+							<img class="portfolio-img slideshow-img" src="{% static 'main/img/portfolio-img-3.jpg' %}" alt="portfolio image">
+							<div class="slideshow-text">
+								<h3 class="slideshow-title">Aerospace Technology</h3>
+								<p class="slideshow-blurb">Experience with aerospace materials and process, from quality assurance to product lifecycle management, blind riveting to friction-stir welding.</p>
+							</div>
+							<div class="slideshow-text-toggle">more</div>
+						</div><div class="slideshow-img-backing">
+							<img class="portfolio-img slideshow-img" src="{% static 'main/img/portfolio-img-4.jpg' %}" alt="portfolio image">
+							<div class="slideshow-text">
+								<h3 class="slideshow-title">Computer-Aided Design</h3>
+								<p class="slideshow-blurb">Employing software in design, analysis, and revision control with Siemens NX, Solidworks, Femap, Nastran, Fusion 360, Teamcenter, Enovia, and more.</p>
+							</div>
+							<div class="slideshow-text-toggle">more</div>
+						</div><div class="slideshow-img-backing">
+							<img class="portfolio-img slideshow-img" src="{% static 'main/img/portfolio-img-5.jpg' %}" alt="portfolio image">
+							<div class="slideshow-text">
+								<h3 class="slideshow-title">Rapid Prototyping</h3>
+								<p class="slideshow-blurb">Experience with rapid prototyping processes including "3D Printing" technologies such as SLS, SLA, DMLS, and FDM, CNC machining and urethane casting.</p>
+							</div>
+							<div class="slideshow-text-toggle">more</div>
+						</div><div class="slideshow-img-backing">
+							<img class="portfolio-img slideshow-img" src="{% static 'main/img/portfolio-img-6.jpg' %}" alt="portfolio image">
+							<div class="slideshow-text">
+								<h3 class="slideshow-title">Website Deployment</h3>
+								<p class="slideshow-blurb">Deployment of websites to Linux server running Ubuntu and Apache, obtaining domain names and SSL certificates, implementing firewalls, and more.</p>
+							</div>
+							<div class="slideshow-text-toggle">more</div>
+						</div>
+					</div>
+				</div>
+				<div class="portfolio-container">
+					<div class="portfolio-panel">
+						<img class="portfolio-img panel-img" src="{% static 'main/img/portfolio-img-1.jpg' %}" alt="portfolio image">
+						<div class="panel-overlay">
+							<p class="portfolio-title">Flight Control Systems</p>
+							<p class="portfolio-blurb"></p>
+						</div>
+					</div>
+					<div class="portfolio-panel">
+						<img class="portfolio-img panel-img" src="{% static 'main/img/portfolio-img-2.jpg' %}" alt="portfolio image">
+						<div class="panel-overlay">
+							<p class="portfolio-title">Computer Programming</p>
+							<p class="portfolio-blurb"></p>
+						</div>
+					</div>
+					<div class="portfolio-panel">
+						<img class="portfolio-img panel-img" src="{% static 'main/img/portfolio-img-3.jpg' %}" alt="portfolio image">
+						<div class="panel-overlay">
+							<p class="portfolio-title">Aerospace Technology</p>
+							<p class="portfolio-blurb"></p>
+						</div>
+					</div>
+					<div class="portfolio-panel">
+						<img class="portfolio-img panel-img" src="{% static 'main/img/portfolio-img-4.jpg' %}" alt="portfolio image">
+						<div class="panel-overlay">
+							<p class="portfolio-title">Computer-Aided Design</p>
+							<p class="portfolio-blurb"></p>
+						</div>
+					</div>
+					<div class="portfolio-panel">
+						<img class="portfolio-img panel-img" src="{% static 'main/img/portfolio-img-5.jpg' %}" alt="portfolio image">
+						<div class="panel-overlay">
+							<p class="portfolio-title">Rapid Prototyping</p>
+							<p class="portfolio-blurb"></p>
+						</div>
+					</div>
+					<div class="portfolio-panel">
+						<img class="portfolio-img panel-img" src="{% static 'main/img/portfolio-img-6.jpg' %}" alt="portfolio image">
+						<div class="panel-overlay">
+							<p class="portfolio-title">Website Deployment</p>
+							<p class="portfolio-blurb"></p>
+						</div>
+					</div>
+				</div>
+				<a class="section-next" id="portfolio-next" href="#contact">Like What You See?</a>
+			</div>
+
+			<!-- Contact -->
+			<div id="contact">
+				<h1 class="section-title" id="contact-title">Drop Us A Line</h1>
+				<div class="section-border title-border" id="contact-title-border"></div>
+				<div id="contact-container">
+					<div class="contact-panel-container">
+						<div class="contact-panel" id="email-panel">
+							<div class="contact-method-container">
+								<div class="contact-img-container">
+									<img class="contact-img" id="email-img" src="{% static 'main/img/email-icon.png' %}"  alt="email icon">
+								</div>
+									<p class="contact-info" id="mailing-address">P.O. Box 155<br>Bothell, WA 98041</p>
+							</div>
+						</div>
+						<div class="contact-panel" id="mail-panel">
+							<div class="contact-method-container">
+								<div class="contact-img-container">
+									<img class="contact-img" id="mail-img" src="{% static 'main/img/mail-icon.png' %}" alt="mail icon">
+								</div>
+								<a class="contact-info" href="mailto:email@address.com">email@address.com</a>
+							</div>
+						</div>
+						<div class="contact-panel" id="phone-panel">
+							<div class="contact-method-container">
+								<div class="contact-img-container">
+									<img class="contact-img" id="phone-img" src="{% static 'main/img/phone-icon.png' %}" alt="phone icon">
+								</div>
+								<a class="contact-info" href="tel:1234567890">+1 (123) 456-7890</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="social-media-container">
+					<div id="social-media-mobile-container">
+						<a class="social-media-link" id="facebook-link" href="https://www.facebook.com/" target="_blank"><img class="social-media-icon" id="facebook-icon" src="{% static 'main/img/facebook-icon.png' %}" alt="Facebook icon"></a><a class="social-media-link" id="twitter-link" href="https://www.twitter.com/" target="_blank"><img class="social-media-icon" id="twitter-icon" src="{% static 'main/img/twitter-icon.png' %}" alt="Twitter icon"></a><a class="social-media-link" id="pinterest-link" href="https://www.pinterest.com/" target="_blank"><img class="social-media-icon" id="pinterest-icon" src="{% static 'main/img/pinterest-icon.png' %}" alt="Pinterest icon"></a><a class="social-media-link" id="youtube-link" href="https://www.youtube.com/" target="_blank"><img class="social-media-icon" id="youtube-icon" src="{% static 'main/img/youtube-icon.png' %}" alt="Youtube icon"></a>
+					</div>
+				</div>
+			</div>
+		</main>
+
+		<!-- Footer -->
+		<footer>
+			Copyright &copy; 2019
+		</footer>
+		<script type="text/javascript" src="{% static 'main/js/type1_template1_home.js' %}"></script>
+	</body>
+{% endblock content %}
